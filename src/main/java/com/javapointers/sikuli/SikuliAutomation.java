@@ -25,14 +25,15 @@ public class SikuliAutomation {
     }
 
     private void startTest() throws FindFailed {
-//        screen.wait(getElement("telegram.png"), 15);
-//        screen.click(getElement("telegram.png"));
-//        screen.wait(getElement("chat_with_bot.png"), 15);
-//        screen.click(getElement("chat_with_bot.png"));
+        screen.wait(getElement("telegram.png"), 15);
+        screen.click(getElement("telegram.png"));
+        screen.wait(getElement("chat_with_bot.png"), 15);
+        screen.click(getElement("chat_with_bot.png"));
+        screen.click(getElement("hide_telegram.png"));
         while (true){
             if (screen.has(getElement("bot_alarm.png"))){
                 try {
-                    Thread.sleep(Duration.ofSeconds(3L));
+                    Thread.sleep(Duration.ofSeconds(2L));
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
